@@ -160,6 +160,9 @@
     <ClCompile Include="components\comp_player_controller.cpp">
       <Filter>components</Filter>
     </ClCompile>
+    <ClCompile Include="components\comp_ia_patrol.cpp">
+      <Filter>components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="windows">
@@ -467,6 +470,9 @@
       <Filter>components</Filter>
     </ClInclude>
     <ClInclude Include="components\comp_player_controller.h">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="components\comp_ia_patrol.h">
       <Filter>components</Filter>
     </ClInclude>
   </ItemGroup>

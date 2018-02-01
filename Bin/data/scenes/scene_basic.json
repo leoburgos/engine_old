@@ -15,16 +15,53 @@
 	},
 	{
 		"entity": {
+			"name": "patrol",
+			"transform": {
+				"pos": "1 0 0"
+			},
+			"render" : {},
+			"ia_patrol" : {
+				"speed": 1,	
+				"wpoints": [
+					"5 0 5",
+					"5 0 -5",
+					"-5 0 5",
+					"-5 0 -5"
+				]			
+			}
+			
+		}
+	},	
+	{
+		"entity": {
 			"name": "turret",
 			"transform": {
 				"pos": "0 0 0"
 			},
 			"render" : {},
 			"ia" : {
-				"alcance" : 15,
-				"chase_distance" : 7,
-				"target" : "teapot"
+				"target" : "teapot",
+				"alcance": 15,
+				"chase_distance": 7			
 			}
+		}
+	},
+	{
+		"entity": {
+			"name": "patrol2",
+			"transform": {
+				"pos": "1 0 5"
+			},
+			"render" : {},
+			"ia_patrol" : {	
+				"speed": 5,
+				"wpoints": [
+					"-7 0 -7",
+					"-7 0 7",
+					"7 0 -7",
+					"7 0 7"
+				]			
+			}			
 		}
 	}
 ]

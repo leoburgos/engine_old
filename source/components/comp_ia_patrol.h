@@ -8,14 +8,14 @@
 
 using namespace std;
 
-class TCompIA;
+class TCompIAPatrol;
  
-typedef void (TCompIA::*statehandler)();
+typedef void (TCompIAPatrol::*statehandler)();
 
-class TCompIA : public TCompBase {
+class TCompIAPatrol : public TCompBase {
 	CHandle     h_target;
 	std::string target_name;
-	float       speed = 1.0f;
+	float       speed;
 	float       curr_yaw = 0.f;
 	float       radius = 1.0f;
 	bool        is_in_fov;
@@ -23,6 +23,10 @@ class TCompIA : public TCompBase {
 	float		alcance;
 	float		chase_distance;
 	float		min_distance;
+	std::vector<VEC3> wpoints;
+	VEC3		current_wpoint;
+	int			max_wpoints;
+	int			current_wpoint_index;
 
 	string state;
 	// the states, as maps to functions
@@ -31,8 +35,6 @@ class TCompIA : public TCompBase {
 	DECL_SIBLING_ACCESS();
 
 public:
-
-  IAIController* ai_controller = nullptr;
 
   void debugInMenu();
   void update(float dt);
@@ -43,6 +45,6 @@ public:
   void AddState(string, statehandler);
 
   void IdleState();
-  void FollowState();
   void ChaseState();
+  void PatrolState();
 };

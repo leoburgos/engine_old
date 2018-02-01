@@ -7,6 +7,7 @@
 		"circular_controller",
 		"ia",
 		"camera",
-		"player_controller"	
+		"player_controller",
+		"ia_patrol"	
 	]
 }
