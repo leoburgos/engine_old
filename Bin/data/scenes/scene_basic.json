@@ -1,16 +1,4 @@
-[{
-		"entity": {
-			"name": "john",
-			"transform": {
-				"pos": "1 0 0",
-				"lookat": "-1 0 -1"
-			},
-			"ia": {
-				"type": "turret"
-			}
-
-		}
-	},
+[
 	{
 		"entity": {
 			"name": "teapot",
@@ -20,7 +8,23 @@
 			}
 			,
 			"transform": {
-				"pos": "5 0 0"
+				"pos": "7 0 0"
+			}
+		}
+	},
+	{
+		"entity": {
+			"name": "xthe_camera",
+			"transform": {
+				"pos": "0 3 3"
+			},
+			"render" : {},
+			"circular_controller" : {
+				"radius" : 3,
+				"target" : "teapot"
+			},
+			"camera" : {
+				"fov" : 80 
 			}
 		}
 	},
@@ -28,15 +32,13 @@
 		"entity": {
 			"name": "turret",
 			"transform": {
-				"pos": "1 3 3"
+				"pos": "0 0 0"
 			},
 			"render" : {},
 			"ia" : {
-				"radius" : 3,
+				"alcance" : 15,
+				"chase_distance" : 7,
 				"target" : "teapot"
-			},
-			"camera" : {
-				"fov" : 80 
 			}
 		}
 	}
