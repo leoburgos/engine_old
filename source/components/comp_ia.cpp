@@ -16,7 +16,7 @@ void TCompIA::debugInMenu() {
 		if (ImGui::TreeNode("Target")) {
 			h_target.debugInMenu();
 			ImGui::TreePop();
-
+			
 		}
 	}
 }
@@ -34,7 +34,7 @@ void TCompIA::load(const json& j, TEntityParseContext& ctx) {
 }
 
 void TCompIA::update(float dt) {
-
+	
 	if (!h_target.isValid())
 		return;
 
@@ -107,7 +107,7 @@ void TCompIA::FollowState()
 
 void TCompIA::ChaseState()
 {
-	if (distance >= chase_distance + 2.f) ChangeState("follow");
+	if (distance >= chase_distance+2.f) ChangeState("follow");
 
 	if (!h_target.isValid())
 		return;

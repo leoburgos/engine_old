@@ -6,6 +6,7 @@
 	"update" : [
 		"circular_controller",
 		"ia",
-		"camera"
+		"camera",
+		"player_controller"	
 	]
 }

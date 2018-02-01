@@ -9,23 +9,8 @@
 			,
 			"transform": {
 				"pos": "7 0 0"
-			}
-		}
-	},
-	{
-		"entity": {
-			"name": "xthe_camera",
-			"transform": {
-				"pos": "0 3 3"
 			},
-			"render" : {},
-			"circular_controller" : {
-				"radius" : 3,
-				"target" : "teapot"
-			},
-			"camera" : {
-				"fov" : 80 
-			}
+			"player_controller": {}
 		}
 	},
 	{
