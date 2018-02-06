@@ -7,6 +7,9 @@ class TCompPlayerController : public TCompBase {
 
   DECL_SIBLING_ACCESS();
 
+  float speed;
+  float rotation_speed;
+
 public:
   void debugInMenu();
   void load(const json& j, TEntityParseContext& ctx);

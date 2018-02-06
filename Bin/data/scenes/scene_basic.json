@@ -10,7 +10,10 @@
 			"transform": {
 				"pos": "7 0 0"
 			},
-			"player_controller": {}
+			"player_controller": {
+				"speed": 4,
+				"rotation_speed": 2
+			}
 		}
 	},
 	{
