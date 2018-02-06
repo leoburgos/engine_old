@@ -8,6 +8,7 @@
 		"ia",
 		"camera",
 		"player_controller",
-		"ia_patrol"	
+		"ia_patrol",
+		"bullet_controller"	
 	]
 }

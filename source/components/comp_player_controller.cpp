@@ -2,6 +2,7 @@
 #include "entity/entity_parser.h"
 #include "comp_player_controller.h"
 #include "comp_transform.h"
+#include "entity/common_msgs.h"
 
 DECL_OBJ_MANAGER("player_controller", TCompPlayerController);
 
@@ -43,11 +44,21 @@ void TCompPlayerController::update(float dt) {
 		current_yaw -= ammount_rotated;
 	}
 
+	const Input::TButton& bt = CEngine::get().getInput().host(Input::PLAYER_1).keyboard().key(VK_SPACE);
+	if (bt.getsPressed()) {
+		dbg("Fireing");
+		TEntityParseContext ctx;
+		if (parseScene("data/prefabs/bullet.prefab", ctx)) {
+			CEntity* e = ctx.entities_loaded[0];
+			e->sendMsg(TMsgAssignBulletOwner{ CHandle(this).getOwner() });
+		}
+	}
+
 	assert(c_my_transform);
 
 	// Sets rotation
-	VEC3 world_speed = VEC3::Transform(local_speed, c_my_transform->asMatrix());
-	VEC3 my_new_pos = c_my_transform->getPosition() + local_speed * ammount_moved;
+	VEC3 world_speed = VEC3::TransformNormal(local_speed, c_my_transform->asMatrix());
+	VEC3 my_new_pos = c_my_transform->getPosition() + world_speed * ammount_moved;
 	c_my_transform->setYawPitchRoll(current_yaw, current_pitch, 0.f);
 
 	// Sets new position
