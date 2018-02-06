@@ -36,7 +36,7 @@
 		"entity": {
 			"name": "turret",
 			"transform": {
-				"pos": "0 0 0"
+				"pos": "0 0 3"
 			},
 			"render" : {},
 			"ia" : {

@@ -10,7 +10,6 @@ void TCompPlayerController::debugInMenu() {
 }
 
 void TCompPlayerController::load(const json& j, TEntityParseContext& ctx) {
-	int a = 1;
 }
 
 void TCompPlayerController::update(float dt) {

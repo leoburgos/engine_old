@@ -35,10 +35,6 @@ void TCompIAPatrol::load(const json& j, TEntityParseContext& ctx) {
 	AddState("chase", (statehandler)&TCompIAPatrol::ChaseState);
 	AddState("patrol", (statehandler)&TCompIAPatrol::PatrolState);
 	ChangeState("patrol");
-	//wpoints.push_back(VEC3(0, 0, 2));
-	//wpoints.push_back(VEC3(5, 0, 5));
-	//wpoints.push_back(VEC3(-3, 0, 3));
-	//wpoints.push_back(VEC3(1, 0, -7));
 	current_wpoint = wpoints[0];
 }
 
