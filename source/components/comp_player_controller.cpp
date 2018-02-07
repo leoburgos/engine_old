@@ -14,6 +14,7 @@ void TCompPlayerController::debugInMenu() {
 void TCompPlayerController::load(const json& j, TEntityParseContext& ctx) {
   speedFactor = j.value("speed", 1.0f);
   rotationSpeed = j.value("rotation_speed", 1.0f);
+  size = j.value("size", 1.0f);
 }
 
 void TCompPlayerController::update(float dt) {
@@ -33,13 +34,13 @@ void TCompPlayerController::update(float dt) {
 
   //Detecto el teclado
   VEC3 local_speed = VEC3::Zero;
-  if (isPressed('W'))
-    local_speed.z += 1.f;
-  if (isPressed('S'))
-    local_speed.z -= 1.f;
   if (isPressed('A'))
-    local_speed.x += 1.f;
+    local_speed.z += 1.f;
   if (isPressed('D'))
+    local_speed.z -= 1.f;
+  if (isPressed('S'))
+    local_speed.x += 1.f;
+  if (isPressed('W'))
     local_speed.x -= 1.f;
   if (isPressed('Q'))
     current_yaw += amount_rotated;

@@ -5,13 +5,15 @@
 
 class TCompPlayerController : public TCompBase {
   float   speedFactor = 1.0f;
-  float   rotationSpeed = 1.0f;
+  float   rotationSpeed = 1.0f;  
+  int     size = 1;
   VEC3    speed;
 
   DECL_SIBLING_ACCESS();
 
 public:
-  void debugInMenu();
-  void load(const json& j, TEntityParseContext& ctx);
-  void update(float dt);
+  void  debugInMenu();
+  void  load(const json& j, TEntityParseContext& ctx);
+  void  update(float dt);
+  
 };

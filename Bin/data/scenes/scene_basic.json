@@ -1,12 +1,13 @@
 [{
 		"entity": {
-			"name": "The Enemy",
+			"name": "The Enemy",			
 			"transform": {
 				"pos": "1 0 0",
 				"lookat": "-1 0 -1"
 			},
 			"render" : {},
 			"ai_patrol": {
+				"size": 2,
 				"waypoints" : [ "-10 0 0", "5 0 5", "2 0 10"] 
 			}
 
@@ -14,7 +15,7 @@
 	},
 	{
 		"entity": {
-			"name": "The Player",
+			"name": "The Player",			
 			"render" : {
 				"mesh": "data/meshes/Teapot001.mesh",
 				"texture": "data/textures/wood_d.dds"
@@ -26,7 +27,8 @@
 			, 
 			"player_controller" : {
 				"rotation_speed" : 3.0,
-				"speed" : 3.0
+				"speed" : 3.0,
+				"size": 2
 			}
 		}
 	},
